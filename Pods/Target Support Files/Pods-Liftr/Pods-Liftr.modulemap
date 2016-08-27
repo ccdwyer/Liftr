@@ -1,0 +1,6 @@
+framework module Pods_Liftr {
+  umbrella header "Pods-Liftr-umbrella.h"
+
+  export *
+  module * { export * }
+}
