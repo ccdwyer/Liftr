@@ -7,4 +7,6 @@ target 'Liftr' do
 
   # Pods for Liftr
   pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 end
