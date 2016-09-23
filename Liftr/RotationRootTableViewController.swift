@@ -139,21 +139,21 @@ class RotationRootTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-        rotationGroups.removeAtIndex(fromIndexPath.row)
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to toIndexPath: IndexPath) {
+        rotationGroups.remove(at: fromIndexPath.row)
     }
-    */
+ 
     
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+    
 
     /*
     // MARK: - Navigation
