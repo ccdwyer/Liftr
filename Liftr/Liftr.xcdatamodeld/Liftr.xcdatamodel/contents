@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A319" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Exercise" syncable="YES">
+        <attribute name="name" attributeType="String" minValueString="1" syncable="YES"/>
+        <attribute name="oneRepMax" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="threeRepMax" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ExerciseSet" parentEntity="RotationElement" syncable="YES">
+        <attribute name="completed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weightCalculationData" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weightCalculationTypeId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" syncable="YES"/>
+    </entity>
+    <entity name="RotationElement" isAbstract="YES" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RotationGroup" inverseName="child" inverseEntity="RotationGroup" syncable="YES"/>
+    </entity>
+    <entity name="RotationGroup" parentEntity="RotationElement" syncable="YES">
+        <attribute name="title" attributeType="String" minValueString="1" syncable="YES"/>
+        <relationship name="child" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RotationElement" inverseName="parent" inverseEntity="RotationElement" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Exercise" positionX="-108" positionY="63" width="128" height="88"/>
+        <element name="ExerciseSet" positionX="90" positionY="11" width="128" height="103"/>
+        <element name="RotationElement" positionX="90" positionY="216" width="128" height="73"/>
+        <element name="RotationGroup" positionX="261" positionY="14" width="128" height="73"/>
+    </elements>
+</model>
